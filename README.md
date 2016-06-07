@@ -2,6 +2,7 @@
 
 # Install
 ```
+npm install pg knex mocha standard -g
 npm install
 ```
 

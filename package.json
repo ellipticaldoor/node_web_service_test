@@ -24,15 +24,15 @@
     "mocha": "^2.5.3"
   },
   "standard": {
-  "globals": [
-    "describe",
-    "context",
-    "before",
-    "beforeEach",
-    "after",
-    "afterEach",
-    "it",
-    "expect"
+    "globals": [
+      "describe",
+      "context",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach",
+      "it",
+      "expect"
     ]
   }
 }
