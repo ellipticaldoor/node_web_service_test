@@ -1,20 +1,25 @@
 var knex = require('./knex.js')
 
-function Shows () {
+function Messages () {
   return knex('messages')
 }
 
 // queries
 
 function getAll () {
-  return Shows().select()
+  return Messages().select()
 }
 
 module.exports = {
   getAll: getAll,
-  getSingle: getSingle
+  getMessage: getMessage,
+  addMessage: addMessage
 }
 
-function getSingle (showID) {
-  return Shows().where('id', parseInt(showID)).first()
+function getMessage (messageID) {
+  return Messages().where('id', parseInt(messageID)).first()
+}
+
+function addMessage (message) {
+  return Messages().insert(message, 'id')
 }

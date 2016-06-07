@@ -34,6 +34,7 @@ describe('API Routes', function () {
       chai.request(server)
       .get('/api/v1/messages')
       .end(function (err, res) {
+        if (err) { console.log(err) }
         res.should.have.status(200)
         res.should.be.json
         res.body.should.be.a('array')
@@ -41,7 +42,6 @@ describe('API Routes', function () {
         res.body[0].should.have.property('message')
         res.body[0].message.should.equal('this is a message')
         done()
-        if (err) { console.log(err) }
       })
     })
   })
@@ -51,13 +51,32 @@ describe('API Routes', function () {
       chai.request(server)
       .get('/api/v1/messages/1')
       .end(function (err, res) {
+        if (err) { console.log(err) }
         res.should.have.status(200)
         res.should.be.json
         res.body.should.be.a('object')
         res.body.should.have.property('message')
         res.body.message.should.equal('this is a message')
         done()
+      })
+    })
+  })
+
+  describe('POST /api/v1/messages', function () {
+    it('should add a message', function (done) {
+      chai.request(server)
+      .post('/api/v1/messages')
+      .send({
+        message: 'a message to test a POST'
+      })
+      .end(function (err, res) {
         if (err) { console.log(err) }
+        res.should.have.status(200)
+        res.should.be.json
+        res.body.should.be.a('object')
+        res.body.should.have.property('message')
+        res.body.message.should.equal('a message to test a POST')
+        done()
       })
     })
   })
