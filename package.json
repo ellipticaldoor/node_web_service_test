@@ -22,5 +22,17 @@
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
     "mocha": "^2.5.3"
+  },
+  "standard": {
+  "globals": [
+    "describe",
+    "context",
+    "before",
+    "beforeEach",
+    "after",
+    "afterEach",
+    "it",
+    "expect"
+    ]
   }
 }
