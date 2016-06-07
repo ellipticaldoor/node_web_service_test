@@ -1,17 +1,17 @@
-## node_web_service_test
+# node_web_service_test
 
-# Install
+## Install
 ```
 npm install pg knex mocha standard -g
 npm install
 ```
 
-# Run
+## Run
 ```
 npm start
 ```
 
-# Test
+## Test
 ```
 npm test
 ```

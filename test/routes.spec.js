@@ -47,7 +47,7 @@ describe('API Routes', function () {
   })
 
   describe('GET /api/v1/messages/:id', function () {
-    it('should return a single show', function (done) {
+    it('should return a single message', function (done) {
       chai.request(server)
       .get('/api/v1/messages/1')
       .end(function (err, res) {
@@ -55,7 +55,7 @@ describe('API Routes', function () {
         res.should.be.json
         res.body.should.be.a('object')
         res.body.should.have.property('message')
-        res.body.name.should.equal('this is a message')
+        res.body.message.should.equal('this is a message')
         done()
         if (err) { console.log(err) }
       })

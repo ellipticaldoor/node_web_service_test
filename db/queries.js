@@ -11,5 +11,10 @@ function getAll () {
 }
 
 module.exports = {
-  getAll: getAll
+  getAll: getAll,
+  getSingle: getSingle
+}
+
+function getSingle (showID) {
+  return Shows().where('id', parseInt(showID)).first()
 }
