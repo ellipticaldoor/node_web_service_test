@@ -22,7 +22,7 @@ npm start
 ```
 
 ## Usage
-With the app running in development mode:
+With the app running:
 
 * **curl http://localhost:3000/api/v1/messages/** - Gets all the messages in the database.
 * **curl http://localhost:3000/api/v1/messages/id** - Replace the id field by a message number id, example: 'curl http://localhost:3000/api/v1/messages/1'.
